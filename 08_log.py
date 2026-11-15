@@ -1,4 +1,4 @@
-
+import os
 from datetime import datetime
 
 def analizar_linea(linea):
