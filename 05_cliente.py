@@ -4,8 +4,9 @@
 
 import socket
 import math
-from modulo1b import parsear_idn
+from importlib import import_module
 
+parsear_idn = import_module("01_identificacion").parsear_idn
 
 class Instrumento:
 
