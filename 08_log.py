@@ -1,4 +1,4 @@
-import os
+
 from datetime import datetime
 
 def analizar_linea(linea):
@@ -120,18 +120,25 @@ if __name__ == "__main__":
     
     # --- BLOQUE DE PRUEBA FINAL PARA LA ETAPA 8 ---
     #---EN CONJUNTO CON MEDICIONES.LOG
+if __name__ == "__main__":
     import os
 
-# Para localiza el archivo mediciones en la misma carpeta donde corre este script
-ruta_archivo = os.path.join(os.path.dirname(__file__), "mediciones.log") if "__file__" in locals() else "mediciones.log"
+    # Para localiza el archivo mediciones en la misma carpeta donde corre este script
+    ruta_archivo = os.path.join(os.path.dirname(__file__), "mediciones.log") if "__file__" in locals() else "mediciones.log"
 
-series, rechazadas = leer_log(ruta_archivo)
+    series, rechazadas = leer_log(ruta_archivo)
 
-print(f"\n¡Análisis finalizado con éxito!")
-print(f"-> Series de mediciones válidas agrupadas: {len(series)}")
-print(f"-> Líneas con errores rechazadas por el filtro: {len(rechazadas)}")
+    print(f"\n¡Análisis finalizado con éxito!")
+    print(f"-> Series de mediciones válidas agrupadas: {len(series)}")
+    print(f"-> Líneas con errores rechazadas por el filtro: {len(rechazadas)}")
 
-print("\nEjemplo de algunas líneas rechazadas detectadas correctamente:")
-for r in rechazadas[:5]:
-    print(f"  - Línea {r['numero_linea']}: '{r['linea']}'")
-    print(f"    Motivo: {r['motivo']}\n")
+    print("\nEjemplo de algunas líneas rechazadas detectadas correctamente:")
+    for r in rechazadas[:5]:
+        print(f"  - Línea {r['numero_linea']}: '{r['linea']}'")
+        print(f"    Motivo: {r['motivo']}\n")
+
+
+        
+
+
+
