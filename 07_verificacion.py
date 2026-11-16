@@ -1,11 +1,14 @@
 
 # ============================================================
-# TRABAJO FINAL INTEGRADOR - UTN FRBA
+
 # EJERCICIO 7: LA VERIFICACION
 # ============================================================
 
 import math
-from modulo2b import con_unidad
+from importlib import import_module
+
+a_numero = import_module("02_magnitudes").a_numero
+con_unidad = import_module("02_magnitudes").con_unidad
 
 
 # ============================================================
